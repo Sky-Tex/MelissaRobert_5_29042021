@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Orinoco - l'appareil photo vintage qu'il vous faut"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader&display=swap" rel="stylesheet">
+    <link rel="icon" href="./images/favicon.png" />
+    <title>Orinoco Appareils photo Vintage</title>
+</head>
+  <body>
+    <!--Header-->
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light">
+          <a class="navbar-brand" href="index.html"><img class="mr-3" src="./images/logo_orinoco.png" height="60" alt="logo Orinoco"/></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div id="navbarContent" class="collapse navbar-collapse">
+              <ul class="navbar-nav w-100 d-flex justify-content-end">
+                  <li class="nav-item active"><a class="nav-link font-weight-bold" href="index.html">Produits</a></li>
+                  <li class="nav-item">
+                      <a class="nav-link font-weight-bold" href="./panier.html">
+                          Panier 
+                          <i class="fas fa-shopping-cart fa-1x"></i>
+                          <span id="cart_number"></span>
+                      </a>
+                  </li>
+                  <li class="nav-item"><a class="nav-link font-weight-bold" href="./confirmation.html">Commande</a></li>
+              </ul>
+          </div>
+      </nav>
+  </header>
+  <!--Fin Header-->
+  <!--Banner-->
+  <section id="banner">
+    <div id="title_container" class="text-uppercase">
+        <h1>Appareils Photo <br/>vintage</h1>
+    </div>
+</section>
+  <!--EndBanner-->
+  <!--Main Section-->
+  <main class="pb-5">
+    <section class="bg-white col-md-auto text-center mb-5 pt-3 pb-3">
+        <h2>Orinoco Appareils photo Vintage</h2>
+    </section>
+    <section class="container col-10 col-md-6 bg-white rounded pb-4">
+        <div class="row">
+            <div id="focus_produit"></div>
+            <div class="input-group w-50 ml-4 mt-4">
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="lense_select">Objectif</label>
+                </div>
+                <select class="custom-select" id="lense_select">
+                    <option value="" selected>Votre choix...</option>
+                </select>
+            </div>
+        </div>
+        <div class="text-center mt-4">
+            <button id="bouton" type="button" class="btn btn-secondary btn-lg" onclick="ajoutPanier()" data-toggle="modal" data-target="#exampleModalCenter">Ajouter au panier</button>
+            <div id="pop_up"></div>
+            <div class="mt-4">
+                <a href="index.html" class="font-weight-bold text-success">Retour liste produits</a>
+            </div>
+        </div>
+    </section>
+</main>
+  <!--End Main Section-->
+
+  <!--Footer-->
+  <footer class="bg-secondary text-white">
+    <div class="">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <ul class="list-inline text-center pt-3">
+                        <li class="list-inline-item"><a href="index.html">Mentions légales</a></li>
+                        <li class="list-inline-item">&middot;</li>
+                        <li class="list-inline-item"><a href="mailto:contact@apvintage.com">Nous contacter</a></li>
+                        <li class="list-inline-item">&middot;</li>
+                        <li class="list-inline-item"><a href="#">Livraison</a></li>
+                        <li class="list-inline-item">&middot;</li>
+                        <li class="list-inline-item"><a href="#">CGV</a></li>
+                        <li class="list-inline-item">&middot;</li>
+                        <li class="list-inline-item"><a href="#">Politiques des cookies & Confidentialité</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+  <!--End Footer-->
+</html>
