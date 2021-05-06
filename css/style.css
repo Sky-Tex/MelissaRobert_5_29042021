@@ -3,5 +3,19 @@ h1, h2 {
 }
 
 footer a {
-	color:#800917;
+	color:#dfdddd;
+}
+
+#banner {
+	background-image: url("../images/banniere.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 460px;
+	
+}
+
+#banner h1 {
+    color: white;
+    text-align: center;
+    padding-top: 1vh;
 }
