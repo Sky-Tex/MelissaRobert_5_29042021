@@ -1,31 +1,30 @@
-const getListOfProducts = async () => {
-    try {
-      const response = await fetch('https://ab-p5-api.herokuapp.com/api/cameras');
-      if (response.ok) {
-        const data = await response.json();
-        data.forEach(element => {
-          let product = document.createElement('a');
-          product.className = 'redirection-page-produit';
-          product.href = `produit.html?id=${element._id}`;
-          product.innerHTML = `
-              <div class="product flex">
-                <div class="product__infos">
-                    <h2 class="product__infos__title">${element.name}</h2>
-                    <p class="product__infos__description">${element.description}</p>
-                </div>
-                <div>
-                    <img class="product__image" src=${element.imageUrl} height="200">
-                </div>
-              </div>
-            <hr class="product__divider">`;
-          document.querySelector('#container-list').append(product);
-        });
-      } else {
-        console.error('Retour du serveur : ', response.status);
-      }
-    } catch (e) {
-      console.log(e);
-    }
-  };
-  
-  getListOfProducts();
+function getRequest(){
+    const fetchPromise = fetch("https://oc-p5-api.herokuapp.com/api/cameras");
+	const inputJS = document.getElementById("produits");
+	
+	fetchPromise.then(response => {
+	  return response.json(); 
+	})
+	.then((data => {
+	  data.forEach((item)  => { 
+		const { name, price, _id, description, imageUrl } = item;
+				inputJS.innerHTML +=`
+				<div class="container col-md-6 col-lg-4">
+				   <div class="affichage_produit mt-4 card bg-white">
+					  <img class=”card-img-top” src="${imageUrl}"  alt="appareil ${name}">
+					  <div class="card-body">
+						 <h3 class="card-title">${name}</h3>
+						  <span>${price/100}€</span></p>
+						 <p class="card-text product-description">${description}</p>
+						 <div class="text-center mt-4" ><a id="bouton" type="button" class="btn btn-secondary text-white" onclick="window.location.href = './produit.html?id=${_id}'">Choisir</a></div>
+					  </div>
+				   </div>
+				</div>`
+	   })
+	}))
+	
+	}
+
+	
+	getRequest()
+	cartNumber()
