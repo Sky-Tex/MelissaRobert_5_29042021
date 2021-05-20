@@ -6,6 +6,10 @@ footer a {
 	color:#dfdddd;
 }
 
+a {
+	cursor: pointer;
+}
+
 #banner {
 	background-image: url("../images/banniere.jpg");
 	background-size: cover;
@@ -18,4 +22,18 @@ footer a {
     color: white;
     text-align: center;
     padding-top: 1vh;
+}
+
+#produits {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.affichage_produit img{
+	width: 100%;
+}
+
+.prix_produit{
+	font-weight: bold;
+	font-size: 1.5em;
 }
