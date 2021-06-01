@@ -29,3 +29,26 @@ function infosHTML(result, index) {
       </tr>
     </tbody>`;
 }
+
+  function ajoutPanier() {
+      let lentilles = document.querySelector('select').value; //Récupère le type de l'objectif choisi
+      if (lentilles == "") { //si aucune lentille choisie, alors message erreur
+        swal("Erreur", "Veuillez choisir un objectif svp", "warning");
+      } else {
+          const panier = JSON.parse(localStorage.getItem("panier")) || [] //Extraction JSON ou création d'un array si le panier est vide
+          panier.push({ //pour chaque article, on injecte les infos suivantes dans le panier
+            image : article.imageUrl,
+            name : article.name,
+            id :article._id,
+            lenses: lense_select.value,
+            description : article.description,
+            price : article.price/100,
+            quantite : 1,
+            subTotal : article.price/100*1
+          })
+          window.localStorage.setItem("panier", JSON.stringify(panier))
+          //console.log(panier)
+          console.log("Le produit a été ajouté au panier");
+          showModal()
+        }
+  }
