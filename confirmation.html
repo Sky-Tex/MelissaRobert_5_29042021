@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Orinoco - l'appareil photo vintage qu'il vous faut"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"/>
+    <link rel="icon" href="./images/favicon.ico" />
+    <title>Orinoco Appareils photo Vintage</title>
+</head>
+  <body>
+    <!--Header-->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="index.html"><img class="mr-3" src="./images/logo_orinoco.png" height="60" alt="logo Orinoco"/></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navbarContent" class="collapse navbar-collapse">
+                <ul class="navbar-nav w-100 d-flex justify-content-end">
+                  <li class="nav-item">
+                      <a class="nav-link font-weight-bold" href="index.html">
+                          Accueil
+                          <i class="fas fa-home"></i>
+                      </a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link font-weight-bold" href="./panier.html">
+                          Panier 
+                          <i class="fas fa-shopping-cart fa-1x"></i>
+                          <span id="cart_number"></span>
+                      </a>
+                  </li>
+                </ul>
+            </div>
+        </nav>
+  </header>
+  <!--Fin Header-->
+    <!--Banner-->
+    <section id="banner">
+        <div id="title_container" class="text-uppercase">
+            <h1>Appareils-photo <br/>vintage</h1>
+        </div>
+    </section>
+    <!--EndBanner-->
+    <!--Main-->
+    <main class="pb-5">
+        <section class="bg-white col-md-auto text-center mb-5 pt-3 pb-3">
+            <h2>Votre commande</h2>
+        </section>
+        <section class="container mt-5" id="confirmation"></section>
+        <section class="container mt-5" id="no_command"></section>
+    </main>
+    <!--EndMain-->
+    <!--Begin Footer-->
+    <footer class="bg-secondary text-white">
+        <div class="">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <ul class="list-inline text-center pt-3">
+                            <li class="list-inline-item"><a href="index.html">Mentions légales</a></li>
+                            <li class="list-inline-item">&middot;</li>
+                            <li class="list-inline-item"><a href="mailto:contact@apvintage.com">Nous contacter</a></li>
+                            <li class="list-inline-item">&middot;</li>
+                            <li class="list-inline-item"><a href="#">Livraison</a></li>
+                            <li class="list-inline-item">&middot;</li>
+                            <li class="list-inline-item"><a href="#">CGV</a></li>
+                            <li class="list-inline-item">&middot;</li>
+                            <li class="list-inline-item"><a href="#">Politiques des cookies & Confidentialité</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--End Footer-->
+
+    <!--Bootstrap Bundle with Popper & Jscripts-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<script src="js/cartnumber.js"></script>
+	<script src="js/confirmation.js"></script>
+    </body>
+</html>
