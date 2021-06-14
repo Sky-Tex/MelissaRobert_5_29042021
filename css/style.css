@@ -8,6 +8,8 @@ footer a {
 
 a {
 	cursor: pointer;
+	color: black !important;
+	text-decoration: none !important;
 }
 
 #cart_number{

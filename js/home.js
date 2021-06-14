@@ -26,5 +26,5 @@ function getRequest(){
 	}
 
 	
-	getRequest()
-	cartNumber()
+	getRequest();
+	cartNumber();
